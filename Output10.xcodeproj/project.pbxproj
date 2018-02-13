@@ -13,6 +13,8 @@
 		0D1EB4651FCC304D0091F30B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D1EB4641FCC304D0091F30B /* Assets.xcassets */; };
 		0D1EB4681FCC304D0091F30B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D1EB4661FCC304D0091F30B /* LaunchScreen.storyboard */; };
 		0D1EB4731FCC304D0091F30B /* Output10Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1EB4721FCC304D0091F30B /* Output10Tests.swift */; };
+		0DA57D2520304EE800843A28 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA57D2420304EE800843A28 /* AuthViewController.swift */; };
+		0DA57D272031FF4C00843A28 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA57D262031FF4C00843A28 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		0D1EB46E1FCC304D0091F30B /* Output10Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Output10Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D1EB4721FCC304D0091F30B /* Output10Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Output10Tests.swift; sourceTree = "<group>"; };
 		0D1EB4741FCC304D0091F30B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DA57D2420304EE800843A28 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		0DA57D262031FF4C00843A28 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				0D1EB4641FCC304D0091F30B /* Assets.xcassets */,
 				0D1EB4661FCC304D0091F30B /* LaunchScreen.storyboard */,
 				0D1EB4691FCC304D0091F30B /* Info.plist */,
+				0DA57D2420304EE800843A28 /* AuthViewController.swift */,
+				0DA57D262031FF4C00843A28 /* SettingsViewController.swift */,
 			);
 			path = Output10;
 			sourceTree = "<group>";
@@ -200,7 +206,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D1EB4601FCC304D0091F30B /* ViewController.swift in Sources */,
+				0DA57D2520304EE800843A28 /* AuthViewController.swift in Sources */,
 				0D1EB45E1FCC304D0091F30B /* AppDelegate.swift in Sources */,
+				0DA57D272031FF4C00843A28 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
