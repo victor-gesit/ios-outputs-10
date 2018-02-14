@@ -774,12 +774,12 @@
                                     <constraint firstAttribute="width" constant="80" id="EyE-L1-JCk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Log in">
+                                <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButtonTapped:" destination="H87-8T-6ur" eventType="touchUpInside" id="gwe-QK-CvL"/>
-                                    <segue destination="ktH-1x-RMx" kind="show" id="stZ-nX-5Hm"/>
+                                    <action selector="loginButtonTappedWithSender:" destination="H87-8T-6ur" eventType="touchUpInside" id="jQo-qM-jlU"/>
+                                    <segue destination="ktH-1x-RMx" kind="show" identifier="dismissLogin" id="stZ-nX-5Hm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJO-Mm-uPb">
@@ -789,7 +789,20 @@
                                     <constraint firstAttribute="height" constant="80" id="pbY-yl-xi7"/>
                                 </constraints>
                                 <state key="normal" image="Touch-icon-lg"/>
+                                <connections>
+                                    <action selector="touchIDLoginAction" destination="H87-8T-6ur" eventType="touchUpInside" id="pBV-UA-I2h"/>
+                                </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OoX-lG-xvl">
+                                <rect key="frame" x="243" y="488" width="49" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9OL-gv-zJg"/>
+                                    <constraint firstAttribute="width" constant="47" id="HB5-Va-qXz"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="switchChanged:" destination="H87-8T-6ur" eventType="valueChanged" id="9wc-58-pGv"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -798,6 +811,7 @@
                             <constraint firstItem="ics-xA-z45" firstAttribute="top" secondItem="fHT-2q-a1b" secondAttribute="top" id="Bry-8O-EtT"/>
                             <constraint firstItem="zvm-Oi-rj8" firstAttribute="top" secondItem="EOf-60-Gez" secondAttribute="top" constant="40" id="Er7-yv-pgi"/>
                             <constraint firstItem="ics-xA-z45" firstAttribute="trailing" secondItem="EOf-60-Gez" secondAttribute="trailing" id="Hax-7x-d2W"/>
+                            <constraint firstItem="EOf-60-Gez" firstAttribute="trailing" secondItem="OoX-lG-xvl" secondAttribute="trailing" constant="30" id="IyN-Vj-JZ5"/>
                             <constraint firstItem="KJO-Mm-uPb" firstAttribute="centerX" secondItem="fHT-2q-a1b" secondAttribute="centerX" id="JV1-ar-x9s"/>
                             <constraint firstItem="QRN-JM-yTP" firstAttribute="top" secondItem="Ey4-9v-7ea" secondAttribute="bottom" id="LMm-vQ-J8u"/>
                             <constraint firstItem="Ey4-9v-7ea" firstAttribute="top" secondItem="K85-S3-5H5" secondAttribute="bottom" id="MK2-0s-tVU"/>
@@ -807,6 +821,7 @@
                             <constraint firstItem="ics-xA-z45" firstAttribute="leading" secondItem="EOf-60-Gez" secondAttribute="leading" id="b8s-7o-eF0"/>
                             <constraint firstItem="EOf-60-Gez" firstAttribute="trailing" secondItem="Viz-Fo-eYh" secondAttribute="trailing" constant="30" id="bPg-ql-Zrr"/>
                             <constraint firstItem="qgL-is-hv6" firstAttribute="top" secondItem="Viz-Fo-eYh" secondAttribute="bottom" constant="8" id="f5z-78-hWM"/>
+                            <constraint firstItem="EOf-60-Gez" firstAttribute="bottom" secondItem="OoX-lG-xvl" secondAttribute="bottom" constant="50" id="glE-6y-moX"/>
                             <constraint firstItem="ics-xA-z45" firstAttribute="bottom" secondItem="EOf-60-Gez" secondAttribute="bottom" id="i4F-it-roz"/>
                             <constraint firstItem="Viz-Fo-eYh" firstAttribute="top" secondItem="QRN-JM-yTP" secondAttribute="bottom" constant="25" id="l8F-35-Ebl"/>
                             <constraint firstItem="Ey4-9v-7ea" firstAttribute="top" secondItem="zvm-Oi-rj8" secondAttribute="bottom" constant="20" id="lfw-sK-Onn"/>
@@ -818,7 +833,10 @@
                         <viewLayoutGuide key="safeArea" id="EOf-60-Gez"/>
                     </view>
                     <connections>
+                        <outlet property="authSwitch" destination="OoX-lG-xvl" id="xhm-hn-5wI"/>
+                        <outlet property="loginButton" destination="qgL-is-hv6" id="f9k-Re-jXH"/>
                         <outlet property="passwordTextField" destination="p9r-kz-UoZ" id="hdf-MD-t92"/>
+                        <outlet property="touchIDButton" destination="KJO-Mm-uPb" id="mFM-Cc-Wsu"/>
                         <outlet property="usernameTextField" destination="ZCN-UE-P62" id="t0Y-l5-RBT"/>
                     </connections>
                 </viewController>
